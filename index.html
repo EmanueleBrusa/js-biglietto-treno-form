@@ -12,17 +12,79 @@
 </head>
 <body>
     <main>
-        <!-- Input per km percorsi -->
-        <input type="text" id="km" placeholder="Inserisci kilometri">
+        <h1 class="text-center mt-5"> Calcola il prezzo del tuo biglietto</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card p-4 mb-5" style="width: 100%;">
+                        <!-- FORM - Inserimenro input -->
+                        <form class="d-flex justify-content-center justify-content-around">
+                            <!-- Input Nome cognome -->
+                            <div class="mb-3">
+                                <label for="nomecognome" class="form-label">Nome e cognome</label>
+                                <input type="text" class="form-control" id="nomecognome" placeholder="inserisci nome cognome">
+                            </div>
+                            <!-- Input km -->
+                            <div class="mb-3">
+                                <label for="km" class="form-label">km da percorerre</label>
+                                <input type="text" class="form-control" id="km" placeholder="Inserisci kilometri">
+                            </div>
+                            <!-- Input fascia età -->
+                            <div class="mb-3 align-self-center">
+                                <label for="eta" class="form-label">Fascia d'età</label>
+                                <select class="form-select" id="eta" aria-label="Default select example">
+                                    <option value="1">Maggiorenne</option>
+                                    <option value="2">Minorenne</option>
+                                    <option value="3">Over 65</option>
 
-        <!-- Input età -->
-        <input type="text" id="eta" placeholder="Inserisci la tua età">
-
-
-        <!-- Pulsante calcola -->
-        <input type="button" id="pulsante" value="calcola prezzo" >
-
-
+                                </select>
+                            </div>
+                        </form>
+                        <div class="d-flex justify-content-center mt-3">
+                            <!-- Pulsanti -->
+                            <input class="me-4" type="button" id="genera" value="Calcola prezzo">
+                            <input type="button" id="azzera" value="Azzera">
+                        </div>
+                    </div>
+                    <!-- FIne card -->
+                </div>
+            </div>
+        </div>
+        <h1 class="text-center"> Il tuo biglietto</h1>
+        <div class="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <h4>Dettaglio passeggeri</h4>
+                        <div class="">
+                            <!-- RISULTATO  -->
+                            <div>Nome passeggero:</div>
+                            <span id="nomeCognomeDef"></span><br />
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Offerta</th>
+                                    <th scope="col">Carrozza</th>
+                                    <th scope="col">Codice CP</th>
+                                    <th scope="col">Costo biglietto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span id="offerta"></span> </td>
+                                    <td><span id="numeroCarrozza"></span> </td>
+                                    <td><span id="codiceCp"></span> </td>
+                                    <td> <span id="risultato"></span> </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 </html>
